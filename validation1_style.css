@@ -6,11 +6,13 @@
 
 /* WEB HEADER */
 h1 {
-    font-size: 500%;
+    color: grey;
+    font-size: 700%;
     position:absolute;
-    top:5cap;
-    left: 15cap;
+    top:3cap;
+    left: 9cap;
     z-index: 1000;
+    right:0.3cap
 }
 form {
     /* display: flex; */
