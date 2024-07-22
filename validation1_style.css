@@ -92,3 +92,12 @@ button {
     margin-bottom: 2cap;
     /* margin-top: 1cap; */
 }
+
+.invalid .erMsg{
+    color: rgb(245, 0, 0);
+    font-size: small;
+}
+.invalid input {
+    border-color: rgb(245, 0, 0);
+    border-width: 0.2cap;
+}

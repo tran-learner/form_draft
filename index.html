@@ -15,33 +15,53 @@
         <p class="quote">Learning is a journey!</p>
     </div>
     
+
     <div class="name">
         <p class="FD">Your full name</p>
-        <input class="nameInput">
-        <span></span>
+        <input class="nameInput"> <br>
+        <span class="erMsg"></span>
     </div>
+
 
     <div class="email">
         <p class="FD">Email</p>
-        <input class="emailInput">
-        <span></span>
+        <input class="emailInput"> <br>
+        <span class="erMsg"></span>
     </div>
 
+   
     <div class="password">
         <p class="FD">Password</p>
-        <input class="passwordInput">
-        <span></span>
+        <input class="passwordInput"> <br>
+        <span class="erMsg"></span>
     </div>
+
 
     <div class="repassword">
         <p class="FD">Re-enter password</p>
-        <input class="repasswordInput">
-        <span></span>
+        <input class="repasswordInput"> <br>
+        <span class="erMsg"></span>
     </div>
+
+
     <br>
     <button class="submit">Sign up!</button>
    </form> 
 
-   <script src="/validation1"></script>
+   <script src="/validation1.js"></script>
+
+   <script>
+        validator({
+            form: '.form1',
+            errorSelector: '.erMsg',
+            rules: [ //gồm 2 object
+                validator.isRequired('.nameInput'),
+                validator.isEmail('.emailInput'),
+                validator.minLength('.passwordInput',6),
+                validator.confirmPassword('.repasswordInput')
+            ]
+        })
+   </script>
+
 </body>
 </html>
