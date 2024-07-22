@@ -17,8 +17,9 @@
     
     <div class="name">
         <p class="FD">Your full name</p>
-        <input class="nameInput">
-        <span></span>
+        <input class="userInput">
+        <br>
+        <span>Please fill out this field</span>
     </div>
 
     <div class="email">
@@ -29,7 +30,7 @@
 
     <div class="password">
         <p class="FD">Password</p>
-        <input class="passwordInput">
+        <input class="userInput">
         <span></span>
     </div>
 
@@ -42,6 +43,17 @@
     <button class="submit">Sign up!</button>
    </form> 
 
-   <script src="/validation1"></script>
+   <script src="/validation1.js"></script>
+   <!-- <script>
+        validator({ //đối tượng? lời gọi hàm?
+            form: '#form1',
+            rule: [
+                validator.isRequired('.nameInput'),
+                validator.isEmail('.emailInput'),
+                // validator.isRequired('.passwordInput'),
+                // validator.isRequired('.repasswordInput')
+            ]
+        })
+   </script> -->
 </body>
 </html>

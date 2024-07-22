@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+span {
+    display: none;
+    margin-top: 0.2cap;
+    font-size: small;
+    color: red;
+}
 /* WEB HEADER */
 h1 {
     color: black;
