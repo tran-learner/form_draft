@@ -32,14 +32,14 @@
    
     <div class="password">
         <p class="FD">Password</p>
-        <input class="passwordInput"> <br>
+        <input class="passwordInput" type="password"> <br>
         <span class="erMsg"></span>
     </div>
 
 
     <div class="repassword">
         <p class="FD">Re-enter password</p>
-        <input class="repasswordInput"> <br>
+        <input class="repasswordInput" type="password"> <br>
         <span class="erMsg"></span>
     </div>
 
@@ -56,9 +56,14 @@
             errorSelector: '.erMsg',
             rules: [ //gồm 2 object
                 validator.isRequired('.nameInput'),
+                validator.isRequired('.emailInput'),
                 validator.isEmail('.emailInput'),
+                validator.isRequired('.passwordInput'),
                 validator.minLength('.passwordInput',6),
-                validator.confirmPassword('.repasswordInput')
+                validator.isRequired('.repasswordInput'),
+                validator.confirmPassword('.repasswordInput', function(){
+                    return document.querySelector('.form1 .passwordInput').value;
+                }, 'The re-entered password is incorrect.')
             ]
         })
    </script>
