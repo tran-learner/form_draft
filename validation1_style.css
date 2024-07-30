@@ -101,3 +101,10 @@ button {
     border-color: rgb(245, 0, 0);
     border-width: 0.2cap;
 }
+.tabs_bar {
+    display: flex;
+    position: absolute;
+    margin-top: 0%;
+    top:1%;
+    left: 60cap;
+}
