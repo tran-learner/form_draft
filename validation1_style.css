@@ -28,8 +28,8 @@ form {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.2);
     place-items: center;
     width: 39cap;
-    top: 2cap;
-    left: 5%;
+    top: 1.5cap;
+    left: 0%;
 }
 
 /* Form header */
@@ -107,4 +107,68 @@ button {
     margin-top: 0%;
     top:1%;
     left: 60cap;
+}
+
+
+.tabs_content {
+    left:0;
+    margin-left: 0%;
+}
+.tab_pane {
+    left:0;
+    margin-left: 0;
+    display: none;
+    /* top:-101%;
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100wh; */
+}
+.tab-item.active {
+    background-color: black;
+    color: white;
+}
+.tab_pane.active {
+    top: 0;
+    display: block;
+}
+
+.text_pane {
+    margin-left:3%;
+    color: white;
+    background-color: black;
+    font-size: larger;
+    margin-top: 5%;
+    width: 35%;
+    text-align: justify;
+    border-radius: 10%;
+    padding-right: 3cap;
+    padding-bottom: 5cap;
+}
+/* .previous {
+    top: -100%;
+    transition: top 1s ease;
+}
+.tab_pane {
+    transition: top 0.5s ease-in-out;
+} */
+
+@keyframes comeup {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes moveup {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100);
+    }
+}
+.previous {
+    animation: moveup linear 1s;
 }
