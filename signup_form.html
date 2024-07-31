@@ -1,0 +1,57 @@
+<form class="form1" style="align-items: center;">
+    <div class="formHeader">
+        <h2>Sign up</h2>
+        <p class="quote">Learning is a journey!</p>
+    </div>
+
+
+    <div class="name">
+        <p class="FD">Your full name</p>
+        <input class="nameInput"> <br>
+        <span class="erMsg"></span>
+    </div>
+
+
+    <div class="email">
+        <p class="FD">Email</p>
+        <input class="emailInput"> <br>
+        <span class="erMsg"></span>
+    </div>
+
+
+    <div class="password">
+        <p class="FD">Password</p>
+        <input class="passwordInput" type="password"> <br>
+        <span class="erMsg"></span>
+    </div>
+
+
+    <div class="repassword">
+        <p class="FD">Re-enter password</p>
+        <input class="repasswordInput" type="password"> <br>
+        <span class="erMsg"></span>
+    </div>
+
+
+    <br>
+    <button class="submit">Sign up!</button>
+</form>
+<script src="/validation1.js"></script>
+
+<script>
+    validator({
+        form: '.form1',
+        errorSelector: '.erMsg',
+        rules: [ //gồm 2 object
+            validator.isRequired('.nameInput'),
+            validator.isRequired('.emailInput'),
+            validator.isEmail('.emailInput'),
+            validator.isRequired('.passwordInput'),
+            validator.minLength('.passwordInput', 6),
+            validator.isRequired('.repasswordInput'),
+            validator.confirmPassword('.repasswordInput', function () {
+                return document.querySelector('.form1 .passwordInput').value;
+            }, 'The re-entered password is incorrect.')
+        ]
+    })
+</script>
